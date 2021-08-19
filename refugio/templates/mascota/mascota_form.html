@@ -1,0 +1,48 @@
+{% extends "base/base.html" %}
+
+{% block title  %} Crear Mascota {% endblock %}
+
+{% block header %}  {% include "base/header.html" %}  {% endblock %}
+
+{% block content %}
+
+<h3 class="text-center">Crear Mascota</h3>
+
+<form action="{% url 'store'  %}" method="post">
+
+    {% csrf_token %}
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="" class="form-control my-4">
+
+    <label for="sexo">Sexo:</label>
+    <input type="text" name="sexo" id="" class="form-control my-4">
+
+    <label for="edad">Edad:</label>
+    <input type="number" name="edad" id="" class="form-control my-4">
+
+    <label for="fecha_rescate">Fecha de rescate:</label>
+    <input type="date" name="fecha_rescate" id="" class="form-control my-4">
+
+    <label for="adoptante">Adoptante:</label>
+    {{form.persona}}
+
+    <label for="vacuna">Vacunas:</label>
+    {{form.vacuna}}
+
+
+
+<button type="submit" class="btn btn-success my-4">Insertar Mascota</button>
+
+
+    
+</form>
+
+
+{% endblock %}
+
+
+{% block footer %}
+
+
+{% endblock %}

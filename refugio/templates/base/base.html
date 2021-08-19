@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Document {% endblock   %}</title>
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   
+</head>
+<body>
+
+    {% block header %}
+
+    <h4> Este es el bloque del header</h4>
+
+    {% endblock  %}
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+
+        {% block content %}
+    </div>
+    <div class="col-lg-2"></div>
+  <h5> Archivo Base</h5>
+
+</div>
+    {% endblock %}
+
+    {% block footer %}
+<h5>Soy el Footer</h5>
+    {% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QRFi3dgfSVKpc1B9idTEuN3cBScszNHP9sOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/bootstrap.min.js'  %}" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
+</body>
+</html>

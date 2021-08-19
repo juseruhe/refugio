@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+
+{% block title  %} Mascotas {% endblock %}
+
+
+{% block header %}
+
+{% include "base/header.html" %}
+
+{% endblock  %}
+
+{% block content %}
+
+<h5> Mascotas</h5>
+
+{% for mascota in mascotas %}
+
+<h3>{{mascota.nombre}}</h3>
+
+
+{% endfor %}
+
+
+
+{% endblock %}
+
+{% block footer %}
+
+<h5>Soy footer de Mascotas</h5>
+
+{% endblock %}
